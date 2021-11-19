@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { Carousel } from "./components";
+
+const images: string[] = [
+  "https://via.placeholder.com/150x300?text=1",
+  "https://via.placeholder.com/150x300?text=2",
+  "https://via.placeholder.com/150x300?text=3",
+  "https://via.placeholder.com/150x300?text=4",
+  "https://via.placeholder.com/150x300?text=5",
+  "https://via.placeholder.com/150x300?text=6",
+  "https://via.placeholder.com/150x300?text=7",
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Carousel images={images} />
     </div>
   );
 }
